@@ -1,0 +1,3 @@
+Short script which checks the last sensor post and controlls if is enought recent.
+Every 24 hours send an email to admins with a DAILY REPORT
+In case of error send a specific email
