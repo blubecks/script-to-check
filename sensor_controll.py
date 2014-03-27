@@ -9,7 +9,7 @@ from email.mime.text import MIMEText
 andrea = "andreabeccaris88@gmail.com"
 gabri = "consigliog@gmail.com"
 dario = "d.facchini@studenti.polito.it"
-barbara = ""
+barbara = "barbara.minutello@gmail.com"
 subject_ok = "[DAILY REPORT]-Rasp"
 subject_err = "[ERROR]-Rasp"
 message_err = '<html><head></head><body>Hi,seems an error has occurred..please check! </body></html>' 
@@ -46,8 +46,8 @@ while True:
 			print "fail gabri mail"
 		if not send_mail(dario,subject_ok,message_ok):
 			print "fail dario mail"
-		#if not send_mail(barbara,subject_ok,message_ok):
-			#print "fail barbara mail"
+		if not send_mail(barbara,subject_ok,message_ok):
+			print "fail barbara mail"
 		
 		print "Result:",report_good,"/",tot_report
 
@@ -77,8 +77,8 @@ while True:
 			print "fail gabri mail"
 		if not send_mail(dario,subject_err,message_err):
 			print "fail dario mail"
-		#if not send_mail(barbara,subject_err,message_err):
-			#print "fail barbara mail"
+		if not send_mail(barbara,subject_err,message_err):
+			print "fail barbara mail"
 	else:
 		print "EVERYTHINGS OK"
 		report_good = report_good+1
