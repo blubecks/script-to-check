@@ -59,8 +59,8 @@ while True:
 	html = response.read()
 	j = json.loads(html)
 
-	print datetime.datetime.now()
-	print j['send_timestamp']
+	print "system time: ",datetime.datetime.now()
+	print "post time: ",j['send_timestamp']
 
 	diff =  datetime.datetime.now()-datetime.datetime.strptime(j['send_timestamp'], "%Y-%m-%dT%H:%M:%S.%f+0100")
 
