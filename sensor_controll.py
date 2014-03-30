@@ -62,11 +62,11 @@ while True:
 	print "system time: ",datetime.datetime.now()
 	print "post time: ",j['send_timestamp']
 
-	diff =  datetime.datetime.now()-datetime.datetime.strptime(j['send_timestamp'], "%Y-%m-%dT%H:%M:%S.%f+0100")
+	diff =  datetime.datetime.now()-datetime.datetime.strptime(j['send_timestamp'], "%Y-%m-%dT%H:%M:%S.%f+0200")
 
 	hh,mm,ss =  str(diff).split(':')
 	print hh,mm,ss
-	if int(mm)>5:
+	if int(mm)>11:
 		print "ERROR"
 		report_wrong = report_wrong+1
 		tot_report = tot_report +1
